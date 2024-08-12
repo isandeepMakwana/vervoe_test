@@ -62,7 +62,7 @@ pip install -r requirements.txt
 ```bash
 python app.py 
 ```
-![](/images/Screenshot%202024-08-12%20at%2011.44.00 PM.png)
+![](/images/2.png)
 
 4. **Access the application:**
 Open your browser and go to `http://localhost:5000` or `http://127.0.0.1:5000` <br />
@@ -75,7 +75,7 @@ Swagger : `http://localhost:5000/swagger` or `http://127.0.0.1:5000/swagger`
 ```bash
 docker-compose up
 ```
-![](/images/Screenshot%202024-08-12%20at%2011.09.23 PM.png)
+![](/images/1.png)
 2. **Access the application:**
 
 Open your browser and go to `http://localhost:5000` or `http://127.0.0.1:5000`
@@ -134,7 +134,7 @@ python test_app.py
 ```
 
 > Ensure that the Flask application is not running while you run the tests, as it will start its own instance of the application for testing purposes.
-![](/images/Screenshot%202024-08-12%20at%2011.45.15 PM.png)
+![](/images/3.png)
 
 **Example Test Coverage**
 - **Fetch Data Test:** Ensures the /fetch-data endpoint returns the correct mock data.
