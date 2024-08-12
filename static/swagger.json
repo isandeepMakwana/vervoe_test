@@ -1,0 +1,127 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Data Processing API",
+      "description": "API for fetching, processing, and retrieving data",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "http://127.0.0.1:5000",
+        "description": "Local development server"
+      }
+    ],
+    "paths": {
+      "/fetch-data": {
+        "get": {
+          "summary": "Fetch mock data",
+          "description": "Simulates fetching data from an external service",
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/process-data": {
+        "post": {
+          "summary": "Process data",
+          "description": "Processes the fetched data and stores it in memory",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Data processed successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/get-processed-data": {
+        "get": {
+          "summary": "Get processed data",
+          "description": "Returns the processed data stored in memory",
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ProcessedProduct"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Product": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            }
+          }
+        },
+        "ProcessedProduct": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name"
+            },
+            "price": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
