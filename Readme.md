@@ -65,7 +65,7 @@ python app.py
 ![](/images/Screenshot%202024-08-12%20at%2011.44.00 PM.png)
 
 4. **Access the application:**
-Open your browser and go to `http://localhost:5000` or `http://127.0.0.1:5000`
+Open your browser and go to `http://localhost:5000` or `http://127.0.0.1:5000` <br />
 Swagger : `http://localhost:5000/swagger` or `http://127.0.0.1:5000/swagger`
 
 
